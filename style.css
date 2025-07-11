@@ -1,0 +1,68 @@
+:root {
+  --primary-color-900: #1F327E;
+  --primary-color-800: #2F4CBC;
+  --primary-color-700: #3F66FB;
+  --primary-color-600: #9FB2FD;
+  --primary-color-500: #CFD8FE;
+  
+  --secondary-color-900: #7F3F4E;
+  --secondary-color-800: #BF5F75;
+  --secondary-color-700: #FE7F9C;
+  --secondary-color-600: #FE7F9C;
+  --secondary-color-500: #F8DFE5;
+
+  --error: #E94F54;
+  --warning: #F3BB1B;
+  --success: #3DC13C;
+  
+  --black: #000000;
+  --white: #FFFFFF;
+
+  --dark-neutral-900: #333333;
+  --dark-neutral-800: #808080;
+  --dark-neutral-700: #BFBFBF;
+  --dark-neutral-600: #E5E5E5;
+  --dark-neutral-500: #F2F2F2;
+  
+  --light-neutral-900: #F5F5F5;
+  --light-neutral-800: #B3B3B3;
+  --light-neutral-700: #8C8C8C;
+  --light-neutral-600: #595959;
+  --light-neutral-500: #404040;
+}
+
+body{
+  background-color: var(--primary-color-500);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.font-afacad-900{
+  font-family: 'Afacad', sans-serif;
+  font-weight: 900;
+}
+
+.line-height-100{
+  line-height: 100%;
+}
+
+.menu-button {
+  display: flex;
+  color: var(--primary-color-500);
+  padding: 10px 15px;
+  width: 100%;
+  align-items: flex-start;
+}
+.menu-button:hover{
+  color: var(--primary-color-900);
+  background-color: var(--primary-color-500);
+  border-radius: 10px;
+  padding: 10px 15px;
+}

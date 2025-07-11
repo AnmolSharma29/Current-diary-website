@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./static/blue.svg" type="current-dairy">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Home - Current Diary School ERP</title>
+</head>
+<body class="flex flex-row h-screen w-full overflow-clip font-[DM_Sans] overflow -y-auto">
+    <!-- Side Nav Bar -->
+    <div class="h-full bg-[var(--primary-color-900)] w-[210px] px-[15px] py-[20px] flex flex-col justify-between">
+        <div class="flex flex-col gap-2 font-['DM_Sans']">
+            <div class="flex flex-row text-[var(--primary-color-500)] font-afacad-900 text-[24px] line-height-100 text-[var(--white)] items-center gap-2">
+                <img src="./static/Current-diary-logo.svg" alt="current-diary-logo" class="w-[55px]">
+                Current <br> Diary
+            </div>
+            <div class="flex flex-col">
+                <button class="menu-button"><i class="ri-home-2-fill mr-2"></i>Dashboard</button>
+                <button class="menu-button"><i class="ri-school-fill mr-2"></i>School</button>
+                <button class="menu-button"><i class="ri-add-line mr-2"></i>Admission</button>
+                <button class="menu-button"><i class="ri-medal-fill mr-2"></i>Result</button>
+                <button class="menu-button"><i class="ri-artboard-fill mr-2"></i>Notices</button>
+                <button class="menu-button"><i class="ri-money-rupee-circle-fill mr-2"></i>Fees</button>
+                <button class="menu-button"><i class="ri-inbox-unarchive-fill mr-2"></i>Inventory</button>
+                <button class="menu-button"><i class="ri-book-shelf-fill mr-2"></i>Library</button>
+                <button class="menu-button"><i class="ri-pass-pending-fill mr-2"></i>Visitor</button>
+            </div>
+        </div>
+        <div class="flex flex-col">
+            <button class="menu-button"><i class="ri-settings-3-fill mr-2"></i>Settings</button>
+            <button class="menu-button"><i class="ri-logout-box-r-fill mr-2"></i>Logout</button>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div class="h-full flex-1 flex flex-col">
+
+        <!-- Top Bar -->
+        <div class="self-stretch h-30 min-w-[780px] px-7 py-2.5 border-b border-blue-800 inline-flex justify-between items-center overflow-hidden">
+            <div class="justify-start text-blue-900 text-3xl font-medium font-['DM_Sans'] leading-9">Dashboard</div>
+                <div class="flex justify-end items-center gap-5">
+                    <i class="ri-notification-2-fill text-2xl left-[2px] top-[2px] text-[var(--primary-color-900)]"></i>
+                    <div data-property-1="Default" class="pl-2.5 pr-5 py-2.5 bg-blue-900 rounded-[100px] flex justify-end items-center gap-5 overflow-hidden">
+                        <div class="p-2.5 bg-white rounded-[100px] flex justify-center items-center gap-2.5 overflow-hidden">
+                            <img class="w-10 h-10" src="https://placehold.co/44x44" />
+                        </div>
+                        <div class="justify-start"><span class="text-neutral-100 text-xl font-bold font-['DM_Sans'] leading-loose">Green Land Public School<br/></span><span class="text-indigo-200 text-base font-normal font-['DM_Sans'] leading-normal">Admin</span></div>
+                        <div class="w-5 h-5 relative overflow-hidden">
+                            <div class="w-2.5 h-1.5 left-[5px] top-[6.99px] absolute bg-neutral-100"></div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="self-stretch px-5 pt-10 pb-5 inline-flex flex-col justify-start items-start gap-2 overflow-hidden">
+            <div class="flex gap-5 w-full text-[var(--primary-color-900)]">
+                <div class="self-stretch h-28 w-full min-w-64 max-w-90 px-3.5 pt-4 pb-2.5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex justify-between items-center overflow-hidden">
+                    <div class="px-2.5 inline-flex flex-col justify-start items-start gap-2 overflow-hidden">
+                        <div class="px-2.5 py-0.5 bg-[var(--secondary-color-600)] rounded-lg inline-flex justify-center items-center gap-2.5 overflow-hidden">
+                            <i class="ri-graduation-cap-fill"></i>
+                            <div class="justify-start text-[var(--primary-color-900)] text-base font-normal font-['DM_Sans'] leading-normal">Students</div>
+                        </div>
+                        <div class="text-center justify-start text-[var(--primary-color-900)] text-3xl font-medium font-['DM_Sans'] leading-9">225</div>
+                    </div>
+                    <a class="bg-[var(--primary-color-800)] rounded-[10px] inline-flex flex-col justify-center items-center gap-2.5 overflow-hidden h-12 w-12" href="">
+                        <i class="ri-external-link-fill text-[var(--white)] text-xl"></i>
+                    </a>
+                </div>
+                <div class="self-stretch h-28 w-full min-w-64 max-w-90 px-3.5 pt-4 pb-2.5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex justify-between items-center overflow-hidden">
+                    <div class="px-2.5 inline-flex flex-col justify-start items-start gap-2 overflow-hidden">
+                        <div class="px-2.5 py-0.5 bg-[var(--secondary-color-600)] rounded-lg inline-flex justify-center items-center gap-2.5 overflow-hidden">
+                            <i class="ri-account-box-fill"></i>
+                            <div class="justify-start text-[var(--primary-color-900)] text-base font-normal font-['DM_Sans'] leading-normal">Staff</div>
+                        </div>
+                        <div class="text-center justify-start text-[var(--primary-color-900)] text-3xl font-medium font-['DM_Sans'] leading-9">225</div>
+                    </div>
+                    <a class="bg-[var(--primary-color-800)] rounded-[10px] inline-flex flex-col justify-center items-center gap-2.5 overflow-hidden h-12 w-12" href="">
+                        <i class="ri-external-link-fill text-[var(--white)] text-xl"></i>
+                    </a>
+                </div>
+                <div class="self-stretch h-28 w-full min-w-64 max-w-90 px-3.5 pt-4 pb-2.5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex justify-between items-center overflow-hidden">
+                    <div class="px-2.5 inline-flex flex-col justify-start items-start gap-2 overflow-hidden">
+                        <div class="px-2.5 py-0.5 bg-[var(--secondary-color-600)] rounded-lg inline-flex justify-center items-center gap-2.5 overflow-hidden">
+                            <i class="ri-money-rupee-circle-fill"></i>
+                            <div class="justify-start text-[var(--primary-color-900)] text-base font-normal font-['DM_Sans'] leading-normal">Fees</div>
+                        </div>
+                        <div class="text-center justify-start text-[var(--primary-color-900)] text-3xl font-medium font-['DM_Sans'] leading-9">₹24,209</div>
+                    </div>
+                    <a class="bg-[var(--primary-color-800)] rounded-[10px] inline-flex flex-col justify-center items-center gap-2.5 overflow-hidden h-12 w-12" href="">
+                        <i class="ri-external-link-fill text-[var(--white)] text-xl"></i>
+                    </a>
+                </div>
+                <div class="self-stretch h-28 w-full min-w-64 max-w-90 px-3.5 pt-4 pb-2.5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex justify-between items-center overflow-hidden">
+                    <div class="px-2.5 inline-flex flex-col justify-start items-start gap-2 overflow-hidden">
+                        <div class="px-2.5 py-0.5 bg-[var(--secondary-color-600)] rounded-lg inline-flex justify-center items-center gap-2.5 overflow-hidden">
+                            <i class="ri-bill-fill text-[--primary-color-900]"></i>
+                            <div class="justify-start text-[var(--primary-color-900)] text-base font-normal font-['DM_Sans'] leading-normal">Receipts</div>
+                        </div>
+                        <div class="text-center justify-start text-[var(--primary-color-900)] text-3xl font-medium font-['DM_Sans'] leading-9">10</div>
+                    </div>
+                    <a class="bg-[var(--primary-color-800)] rounded-[10px] inline-flex flex-col justify-center items-center gap-2.5 overflow-hidden h-12 w-12" href="">
+                        <i class="ri-external-link-fill text-[var(--white)] text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="h-1000">
+                <div class="w-[718px] p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-end items-start gap-2.5 overflow-hidden">
+                    <div class="text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">No. of Students</div>
+                    <div class="w-24 h-0 outline outline-[3px] outline-offset-[-1.50px] outline-rose-400"></div>
+                    <!-- <div class="self-stretch inline-flex justify-center items-end gap-1 overflow-hidden">
+                        <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                                <div class="w-0 h-36 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
+                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">Nur.</div>
+                            </div>
+                        </div>
+                        <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">15</div>
+                                <div class="w-0 h-16 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
+                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">LKG</div>
+                            </div>
+                        </div>
+                        <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">17</div>
+                                <div class="w-0 h-28 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
+                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">UKG</div>
+                            </div>
+                        </div>
+                        <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">8</div>
+                                <div class="w-0 h-5 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
+                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">1st</div>
+                            </div>
+                        </div>
+                        <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">17</div>
+                                <div class="w-0 h-28 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
+                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">2nd</div>
+                            </div>
+                        </div>
+                        <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">17</div>
+                                <div class="w-0 h-28 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
+                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">3rd</div>
+                            </div>
+                        </div>
+                        <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                                <div class="w-0 h-20 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
+                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">4th</div>
+                            </div>
+                        </div>
+                        <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">6</div>
+                                <div class="w-0 h-4 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
+                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">5th</div>
+                            </div>
+                        </div>
+                        <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">16</div>
+                                <div class="w-0 h-24 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
+                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">6th</div>
+                            </div>
+                        </div>
+                        <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">18</div>
+                                <div class="w-0 h-36 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
+                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">7th</div>
+                            </div>
+                        </div>
+                        <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">14</div>
+                                <div class="w-0 h-14 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
+                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">8th</div>
+                            </div>
+                        </div>
+                        <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                                <div class="w-0 h-28 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
+                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">9th</div>
+                            </div>
+                        </div>
+                        <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">19</div>
+                                <div class="w-0 h-36 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
+                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">10th</div>
+                            </div>
+                        </div>
+                        <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">16</div>
+                                <div class="w-0 h-24 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
+                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">11th</div>
+                            </div>
+                        </div>
+                        <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">12</div>
+                                <div class="w-0 h-10 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
+                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">12th</div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+
+            </div>
+            
+            <div class="flex gap-5 h-70 w-full">
+                <!-- Table -->
+                <div class="h-full w-full">
+                    <div class="h-full self-stretch w-full min-w-[820px] p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-start items-start gap-2.5 overflow-hidden">
+                        <div class="justify-center text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">Students & Staff Record</div>
+                        <div class="w-24 outline outline-[3px] outline-offset-[-1.50px] outline-[var(--secondary-color-600)]"></div>
+                                    
+                        <div class="h-64 overflow-y-auto border-2 border-[var(--primary-color-900)] rounded-[10px] w-full no-scrollbar">
+                            <table class="min-w-full table-fixed border-separate border-spacing-0 text-[var(--primary-color-900)]">
+                                <thead class="sticky top-0 z-10 bg-[var(--primary-color-500)]">
+                                    <tr>
+                                        <th class="py-1 px-3 border border-[var(--primary-color-600)] text-left">S.No</th>
+                                        <th class="py-1 px-3 border border-[var(--primary-color-600)] text-left">Name</th>
+                                        <th class="py-1 px-3 border border-[var(--primary-color-600)] text-left">Profession</th>
+                                        <th class="py-1 px-3 border border-[var(--primary-color-600)] text-left">Enr.No.</th>
+                                        <th class="py-1 px-3 border border-[var(--primary-color-600)] text-left">Number</th>
+                                        <th class="py-1 px-3 border border-[var(--primary-color-600)] text-left">DoB</th>
+                                        <th class="py-1 px-3 border border-[var(--primary-color-600)] text-left">Father</th>
+                                        <th class="py-1 px-3 border border-[var(--primary-color-600)] text-left">Edit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">1.</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">2.</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">3.</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">4.</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">5.</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- Student Search -->
+                <div class="w-90 self-stretch p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-start items-start gap-2.5 overflow-hidden">
+                    <div class="self-stretch justify-center text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">Search Student</div>
+                    <div class="w-24 outline outline-[3px] outline-offset-[-1.50px] outline-rose-400"></div>
+                    <form class="w-full h-40 py-2.5 inline-flex justify-center items-start gap-2.5 overflow-hidden">
+                        <input class="text-[var(--primary-color-900)] h-10 w-full px-3 py-1.5 rounded-[10px] outline outline-1 outline-offset-[-1px] outline-[var(--light-neutral-700)] flex justify-start items-center gap-2.5 overflow-hidden w-full" placeholder="Search"></input>
+                        <button onclick="SubmitEvent" class="w-14 h-10 relative bg-[var(--primary-color-800)] rounded-[10px] overflow-hidden cursor-pointer">
+                            <i class="ri-search-2-line text-[var(--white)]"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
