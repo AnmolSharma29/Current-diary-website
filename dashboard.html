@@ -42,30 +42,32 @@
     <div class="h-full flex-1 flex flex-col">
 
         <!-- Top Bar -->
-        <div class="self-stretch h-30 min-w-[780px] px-7 py-2.5 border-b border-blue-800 inline-flex justify-between items-center overflow-hidden">
-            <div class="justify-start text-blue-900 text-3xl font-medium font-['DM_Sans'] leading-9">Dashboard</div>
+        <div class="self-stretch min-w-[780px] px-7 py-2.5 border-b border-blue-800 inline-flex justify-between items-center overflow-hidden">
+            <h4 class="justify-start text-blue-900 text-3xl font-medium font-['DM_Sans']">Dashboard</h4>
                 <div class="flex justify-end items-center gap-5">
-                    <i class="ri-notification-2-fill text-2xl left-[2px] top-[2px] text-[var(--primary-color-900)]"></i>
+                    <i class="ri-notification-3-fill text-2xl left-[2px] top-[2px] text-[var(--primary-color-900)]"></i>
                     <div data-property-1="Default" class="pl-2.5 pr-5 py-2.5 bg-blue-900 rounded-[100px] flex justify-end items-center gap-5 overflow-hidden">
-                        <div class="p-2.5 bg-white rounded-[100px] flex justify-center items-center gap-2.5 overflow-hidden">
-                            <img class="w-10 h-10" src="https://placehold.co/44x44" />
+                        <div class="w-12 h-12 p-2.5 bg-white rounded-[100px] flex justify-center items-center gap-2.5 overflow-hidden">
+                            <img class="w-full h-full" src="" />
                         </div>
-                        <div class="justify-start"><span class="text-neutral-100 text-xl font-bold font-['DM_Sans'] leading-loose">Green Land Public School<br/></span><span class="text-indigo-200 text-base font-normal font-['DM_Sans'] leading-normal">Admin</span></div>
-                        <div class="w-5 h-5 relative overflow-hidden">
-                            <div class="w-2.5 h-1.5 left-[5px] top-[6.99px] absolute bg-neutral-100"></div>
-                        </div>
+                        <div class="justify-start"><span class="text-neutral-100 text-xl font-bold font-['DM_Sans'] leading-none">Green Land Public School<br/></span><span class="text-indigo-200 text-base font-normal font-['DM_Sans'] leading-none">Admin</span></div>
+                        <i class="ri-arrow-down-wide-fill text-[var(--white)]"></i>
                     </div>
                 </div>
         </div>
 
         <!-- Main Content -->
-        <div class="self-stretch px-5 pt-10 pb-5 inline-flex flex-col justify-start items-start gap-2 overflow-hidden">
+        <div class="self-stretch px-4 py-5 flex flex-col justify-start items-start gap-4 overflow-y-scroll [&::-webkit-scrollbar]:w-3
+                            [&::-webkit-scrollbar-track]:rounded-full
+                            [&::-webkit-scrollbar-track]:bg-[var(--white)]]
+                            [&::-webkit-scrollbar-thumb]:rounded-full
+                            [&::-webkit-scrollbar-thumb]:bg-[var(--primary-color-900)]">
             <div class="flex gap-5 w-full text-[var(--primary-color-900)]">
-                <div class="self-stretch h-28 w-full min-w-64 max-w-90 px-3.5 pt-4 pb-2.5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex justify-between items-center overflow-hidden">
+                <div class="self-stretch w-full min-w-64 max-w-90 px-3.5 py-4 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex justify-between items-center overflow-hidden">
                     <div class="px-2.5 inline-flex flex-col justify-start items-start gap-2 overflow-hidden">
                         <div class="px-2.5 py-0.5 bg-[var(--secondary-color-600)] rounded-lg inline-flex justify-center items-center gap-2.5 overflow-hidden">
                             <i class="ri-graduation-cap-fill"></i>
-                            <div class="justify-start text-[var(--primary-color-900)] text-base font-normal font-['DM_Sans'] leading-normal">Students</div>
+                            <div class="justify-start text-[var(--primary-color-900)] text-base font-normal font-['DM_Sans'] leading-none">Students</div>
                         </div>
                         <div class="text-center justify-start text-[var(--primary-color-900)] text-3xl font-medium font-['DM_Sans'] leading-9">225</div>
                     </div>
@@ -73,11 +75,11 @@
                         <i class="ri-external-link-fill text-[var(--white)] text-xl"></i>
                     </a>
                 </div>
-                <div class="self-stretch h-28 w-full min-w-64 max-w-90 px-3.5 pt-4 pb-2.5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex justify-between items-center overflow-hidden">
+                <div class="self-stretch w-full min-w-64 max-w-90 px-3.5 py-4 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex justify-between items-center overflow-hidden">
                     <div class="px-2.5 inline-flex flex-col justify-start items-start gap-2 overflow-hidden">
                         <div class="px-2.5 py-0.5 bg-[var(--secondary-color-600)] rounded-lg inline-flex justify-center items-center gap-2.5 overflow-hidden">
                             <i class="ri-account-box-fill"></i>
-                            <div class="justify-start text-[var(--primary-color-900)] text-base font-normal font-['DM_Sans'] leading-normal">Staff</div>
+                            <div class="justify-start text-[var(--primary-color-900)] text-base font-normal font-['DM_Sans'] leading-none">Staff</div>
                         </div>
                         <div class="text-center justify-start text-[var(--primary-color-900)] text-3xl font-medium font-['DM_Sans'] leading-9">225</div>
                     </div>
@@ -85,11 +87,11 @@
                         <i class="ri-external-link-fill text-[var(--white)] text-xl"></i>
                     </a>
                 </div>
-                <div class="self-stretch h-28 w-full min-w-64 max-w-90 px-3.5 pt-4 pb-2.5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex justify-between items-center overflow-hidden">
+                <div class="self-stretch w-full min-w-64 max-w-90 px-3.5 py-4 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex justify-between items-center overflow-hidden">
                     <div class="px-2.5 inline-flex flex-col justify-start items-start gap-2 overflow-hidden">
                         <div class="px-2.5 py-0.5 bg-[var(--secondary-color-600)] rounded-lg inline-flex justify-center items-center gap-2.5 overflow-hidden">
                             <i class="ri-money-rupee-circle-fill"></i>
-                            <div class="justify-start text-[var(--primary-color-900)] text-base font-normal font-['DM_Sans'] leading-normal">Fees</div>
+                            <div class="justify-start text-[var(--primary-color-900)] text-base font-normal font-['DM_Sans'] leading-none">Fees</div>
                         </div>
                         <div class="text-center justify-start text-[var(--primary-color-900)] text-3xl font-medium font-['DM_Sans'] leading-9">₹24,209</div>
                     </div>
@@ -97,11 +99,11 @@
                         <i class="ri-external-link-fill text-[var(--white)] text-xl"></i>
                     </a>
                 </div>
-                <div class="self-stretch h-28 w-full min-w-64 max-w-90 px-3.5 pt-4 pb-2.5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex justify-between items-center overflow-hidden">
+                <div class="self-stretch w-full min-w-64 max-w-90 px-3.5 py-4 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex justify-between items-center overflow-hidden">
                     <div class="px-2.5 inline-flex flex-col justify-start items-start gap-2 overflow-hidden">
                         <div class="px-2.5 py-0.5 bg-[var(--secondary-color-600)] rounded-lg inline-flex justify-center items-center gap-2.5 overflow-hidden">
                             <i class="ri-bill-fill text-[--primary-color-900]"></i>
-                            <div class="justify-start text-[var(--primary-color-900)] text-base font-normal font-['DM_Sans'] leading-normal">Receipts</div>
+                            <div class="justify-start text-[var(--primary-color-900)] text-base font-normal font-['DM_Sans'] leading-none">Receipts</div>
                         </div>
                         <div class="text-center justify-start text-[var(--primary-color-900)] text-3xl font-medium font-['DM_Sans'] leading-9">10</div>
                     </div>
@@ -111,129 +113,190 @@
                 </div>
             </div>
             
-            <div class="h-1000">
-                <div class="w-[718px] p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-end items-start gap-2.5 overflow-hidden">
-                    <div class="text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">No. of Students</div>
-                    <div class="w-24 h-0 outline outline-[3px] outline-offset-[-1.50px] outline-rose-400"></div>
-                    <!-- <div class="self-stretch inline-flex justify-center items-end gap-1 overflow-hidden">
+            <div class="flex gap-5 w-full text-[var(--primary-color-900)]">
+
+                <!-- Students Graph -->
+                <div class="w-[718px] p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-between items-start gap-2.5 overflow-hidden">
+                    <div>
+                        <p class="text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-none mb-3">No. of Students</p>
+                        <div class="w-24 h-0 outline outline-[3px] outline-offset-[-1.50px] outline-rose-400"></div>
+                    </div>
+                    <div class="self-stretch inline-flex justify-center items-end gap-1 overflow-hidden">
                         <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
-                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
-                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
-                                <div class="w-0 h-36 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
-                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">Nur.</div>
+                            <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                                <div class="w-5 h-36 bg-[var(--primary-color-900)] rounded-full"></div>
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">Nur.</div>
                             </div>
                         </div>
                         <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
-                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
-                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">15</div>
-                                <div class="w-0 h-16 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
-                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">LKG</div>
+                            <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                                <div class="w-5 h-16 bg-[var(--primary-color-900)] rounded-full"></div>
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">LKG</div>
                             </div>
                         </div>
                         <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
-                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
-                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">17</div>
-                                <div class="w-0 h-28 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
-                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">UKG</div>
+                            <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                                <div class="w-5 h-20 bg-[var(--primary-color-900)] rounded-full"></div>
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">UKG</div>
                             </div>
                         </div>
                         <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
-                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
-                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">8</div>
-                                <div class="w-0 h-5 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
-                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">1st</div>
+                            <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                                <div class="w-5 h-36 bg-[var(--primary-color-900)] rounded-full"></div>
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">1st</div>
                             </div>
                         </div>
                         <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
-                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
-                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">17</div>
-                                <div class="w-0 h-28 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
-                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">2nd</div>
+                            <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                                <div class="w-5 h-8 bg-[var(--primary-color-900)] rounded-full"></div>
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">2nd</div>
                             </div>
                         </div>
                         <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
-                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
-                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">17</div>
-                                <div class="w-0 h-28 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
-                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">3rd</div>
+                            <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                                <div class="w-5 h-24 bg-[var(--primary-color-900)] rounded-full"></div>
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">3rd</div>
                             </div>
                         </div>
                         <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
-                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
-                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
-                                <div class="w-0 h-20 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
-                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">4th</div>
+                            <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                                <div class="w-5 h-36 bg-[var(--primary-color-900)] rounded-full"></div>
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">4th</div>
                             </div>
                         </div>
                         <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
-                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
-                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">6</div>
-                                <div class="w-0 h-4 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
-                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">5th</div>
+                            <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                                <div class="w-5 h-26 bg-[var(--primary-color-900)] rounded-full"></div>
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">5th</div>
                             </div>
                         </div>
                         <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
-                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
-                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">16</div>
-                                <div class="w-0 h-24 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
-                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">6th</div>
+                            <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                                <div class="w-5 h-28 bg-[var(--primary-color-900)] rounded-full"></div>
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">6th</div>
                             </div>
                         </div>
                         <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
-                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
-                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">18</div>
-                                <div class="w-0 h-36 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
-                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">7th</div>
+                            <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                                <div class="w-5 h-23 bg-[var(--primary-color-900)] rounded-full"></div>
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">7th</div>
                             </div>
                         </div>
                         <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
-                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
-                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">14</div>
-                                <div class="w-0 h-14 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
-                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">8th</div>
+                            <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                                <div class="w-5 h-12 bg-[var(--primary-color-900)] rounded-full"></div>
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">8th</div>
                             </div>
                         </div>
                         <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
-                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
-                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
-                                <div class="w-0 h-28 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
-                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">9th</div>
+                            <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                                <div class="w-5 h-36 bg-[var(--primary-color-900)] rounded-full"></div>
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">9th</div>
                             </div>
                         </div>
                         <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
-                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
-                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">19</div>
-                                <div class="w-0 h-36 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
-                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">10th</div>
+                            <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                                <div class="w-5 h-10 bg-[var(--primary-color-900)] rounded-full"></div>
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">10th</div>
                             </div>
                         </div>
                         <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
-                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
-                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">16</div>
-                                <div class="w-0 h-24 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
-                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">11th</div>
+                            <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                                <div class="w-5 h-14 bg-[var(--primary-color-900)] rounded-full"></div>
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">11th</div>
                             </div>
                         </div>
                         <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
-                            <div class="self-stretch flex flex-col justify-end items-center gap-5 overflow-hidden">
-                                <div class="self-stretch text-center justify-start text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">12</div>
-                                <div class="w-0 h-10 outline outline-[25px] outline-offset-[-12.50px] outline-blue-800"></div>
-                                <div class="self-stretch text-center justify-start text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">12th</div>
+                            <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                                <div class="w-5 h-36 bg-[var(--primary-color-900)] rounded-full"></div>
+                                <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">12th</div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
+
+
+                <!-- Calender -->
+                <div class="self-stretch self-stretch min-w-[500px] p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-start items-start gap-2.5 overflow-hidden">
+                    <p class="justify-center text-blue-900 text-xl font-bold font-['DM_Sans'] leading-none">Calender</p>
+                    <div class="w-24 h-0 outline outline-[3px] outline-offset-[-1.50px] outline-rose-400"></div>
+                    <div class="self-stretch flex-1 rounded-md inline-flex justify-center items-center gap-3.5">
+                        <div class="flex-1 self-stretch inline-flex flex-col justify-start items-start overflow-hidden">
+                            <div class="calender">
+                                <div class="header">
+                                    <button class="prevBtn">
+                                        <i class="ri-arrow-left-s-line"></i>
+                                    </button>
+                                    <div class="monthYear" id="monthYear"></div>
+                                    <button class="nextBtn">
+                                        <i class="ri-arrow-right-s-line"></i>
+                                    </button>
+                                    <div class="days">
+                                        <div class="day">Mon</div>
+                                        <div class="day">Tues</div>
+                                        <div class="day">Wed</div>
+                                        <div class="day">Thurs</div>
+                                        <div class="day">Fri</div>
+                                        <div class="day">Sat</div>
+                                        <div class="day">Sun</div>
+                                    </div>
+                                    <div class="dates" id="dates"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-0 h-44 outline outline-1 outline-offset-[-0.50px] outline-zinc-400"></div>
+                        <div class="flex-1 self-stretch px-4 py-2.5 inline-flex flex-col justify-start items-start gap-7">
+                            <div class="inline-flex justify-start items-start gap-2.5">
+                                <div class="justify-center text-blue-800 text-lg font-medium font-['DM_Sans'] leading-7">Students’ Birthday</div>
+                            </div>
+                            <div data-birthday="True" class="w-56 py-2 flex justify-start items-center gap-3">
+                                <div class="w-18 h-20 relative overflow-hidden">
+                                    <img class="w-14 h-14 left-0 top-0 absolute rounded-full" src="https://placehold.co/56x56" />
+                                    <div class="w-12 h-12 left-[34px] top-[34px] absolute absolute text-2xl">🎉</div>
+                                </div>
+                                <div class="flex-1 inline-flex flex-col justify-start items-center overflow-hidden">
+                                    <div class="self-stretch text-center justify-center text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">Aakriti Mishra</div>
+                                    <div class="w-12 outline outline-[2px] outline-offset-[-1.50px] outline-rose-400"></div>
+                                    <div class="self-stretch justify-center"><span class="text-blue-800 text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight">Enr. No.:</span><span class="text-black text-base font-normal font-['DM_Sans'] leading-normal tracking-tight"> </span><span class="text-neutral-700 text-sm font-medium font-['DM_Sans'] leading-normal tracking-tight">392</span></div>
+                                    <div class="self-stretch justify-center"><span class="text-blue-800 text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight">Class:</span><span class="text-black text-base font-normal font-['DM_Sans'] leading-normal tracking-tight"> </span><span class="text-neutral-700 text-sm font-medium font-['DM_Sans'] leading-normal tracking-tight">3rd</span></div>
+                                    <div class="self-stretch justify-center"><span class="text-blue-800 text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight">Fathers:</span><span class="text-black text-base font-bold font-['DM_Sans'] leading-normal tracking-tight"> </span><span class="text-neutral-700 text-sm font-medium font-['DM_Sans'] leading-normal tracking-tight">Naresh</span></div>
+                                    <div class="self-stretch justify-center"><span class="text-blue-800 text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight">Phone:</span><span class="text-black text-base font-normal font-['DM_Sans'] leading-normal tracking-tight"> </span><span class="text-neutral-700 text-sm font-medium font-['DM_Sans'] leading-normal tracking-tight">9999999999</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
             
-            <div class="flex gap-5 h-70 w-full">
+            <div class="flex gap-5 h-full w-full">
                 <!-- Table -->
                 <div class="h-full w-full">
                     <div class="h-full self-stretch w-full min-w-[820px] p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-start items-start gap-2.5 overflow-hidden">
-                        <div class="justify-center text-blue-900 text-xl font-bold font-['DM_Sans'] leading-loose">Students & Staff Record</div>
-                        <div class="w-24 outline outline-[3px] outline-offset-[-1.50px] outline-[var(--secondary-color-600)]"></div>
+                        <p class="justify-center text-blue-900 text-xl font-bold font-['DM_Sans'] leading-none">Students & Staff Record</p>
+                        <div class="w-24 outline outline-[3px] outline-offset-[-1.50px] outline-[var(--secondary-color-600)] mb-2"></div>
                                     
-                        <div class="h-64 overflow-y-auto border-2 border-[var(--primary-color-900)] rounded-[10px] w-full no-scrollbar">
+                        <div class="h-70 overflow-y-auto border-2 border-[var(--primary-color-900)] rounded-[10px] w-full [&::-webkit-scrollbar]:w-2
+                            [&::-webkit-scrollbar-track]:rounded-full
+                            [&::-webkit-scrollbar-track]:bg-none]
+                            [&::-webkit-scrollbar-thumb]:rounded-full
+                            [&::-webkit-scrollbar-thumb]:bg-[var(--primary-color-500)]">
                             <table class="min-w-full table-fixed border-separate border-spacing-0 text-[var(--primary-color-900)]">
                                 <thead class="sticky top-0 z-10 bg-[var(--primary-color-500)]">
                                     <tr>
@@ -298,6 +361,56 @@
                                         <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
                                         <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
                                     </tr>
+                                    <tr>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">1.</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">2.</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">3.</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">4.</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">5.</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                        <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -308,7 +421,7 @@
 
                 <!-- Student Search -->
                 <div class="w-90 self-stretch p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-start items-start gap-2.5 overflow-hidden">
-                    <div class="self-stretch justify-center text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">Search Student</div>
+                    <div class="self-stretch justify-center text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-none">Search Student</div>
                     <div class="w-24 outline outline-[3px] outline-offset-[-1.50px] outline-rose-400"></div>
                     <form class="w-full h-40 py-2.5 inline-flex justify-center items-start gap-2.5 overflow-hidden">
                         <input class="text-[var(--primary-color-900)] h-10 w-full px-3 py-1.5 rounded-[10px] outline outline-1 outline-offset-[-1px] outline-[var(--light-neutral-700)] flex justify-start items-center gap-2.5 overflow-hidden w-full" placeholder="Search"></input>
