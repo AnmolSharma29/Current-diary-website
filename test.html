@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="./static/blue.svg" type="current-dairy">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Home - Current Diary School ERP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex bg-gray-100">
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="bg-white border-r shadow-md min-h-screen transition-all duration-300 w-64 md:w-64 md:block hidden fixed md:static z-50">
+    <div class="flex items-center justify-between p-4 border-b">
+      <h1 class="font-bold text-lg cursor-pointer" onclick="toggleSidebar()">LOGO</h1>
+      <div class="md:hidden block">
+        <button onclick="toggleMobileNav()">✖</button>
+      </div>
+    </div>
+    <ul class="p-4 space-y-2">
+      <li>
+        <button onclick="toggleDropdown('menu1')" class="flex justify-between items-center w-full">
+          <span>Menu 1</span>
+          <span>▼</span>
+        </button>
+        <ul id="menu1" class="hidden pl-4 space-y-1 text-sm">
+          <li><a href="#" class="block">Submenu 1</a></li>
+          <li><a href="#" class="block">Submenu 2</a></li>
+        </ul>
+      </li>
+      <li>
+        <button onclick="toggleDropdown('menu2')" class="flex justify-between items-center w-full">
+          <span>Menu 2</span>
+          <span>▼</span>
+        </button>
+        <ul id="menu2" class="hidden pl-4 space-y-1 text-sm">
+          <li><a href="#" class="block">Submenu A</a></li>
+          <li><a href="#" class="block">Submenu B</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Overlay for mobile -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden" onclick="toggleMobileNav()"></div>
+
+  <!-- Content -->
+  <div class="flex-1 ml-0 bg-[var(--primary-color-500)]">
+    <div class="flex w-full border-b border-[var(--primary-color-900)] p-1 md:p-2 justify-between items-center">
+      <button class="md:hidden ml-5" onclick="toggleMobileNav()"><i class="ri-menu-2-line text-2xl mt-5"></i></button>
+      <h4 class="justify-start text-[var(--primary-color-900)] text-3xl font-medium font-['DM_Sans'] hidden md:block h-full ml-5">Dashboard</h4>
+      <div class="bg-[var(--primary-color-900)] rounded-4xl font-['DM_Sans'] relative">
+        <a id="dropdownToggle" class="flex px-2 py-2 gap-2 items-center profile cursor-pointer">
+            <div class="w-12 h-12 p-2.5 bg-white rounded-[100px] flex justify-center items-center gap-2.5 overflow-hidden">
+                <img class="w-full h-full" src="/static/Green_Land_Public_School_logo_2-01_(4)[1].png" />
+            </div>
+            <div class="justify-start"><span class="text-neutral-100 text-md md:text-xl font-bold font-['DM_Sans'] leading-none">Green Land Public School<br/></span><span class="text-indigo-200 text-sm md:text-base font-normal font-['DM_Sans'] leading-none">Admin</span></div>
+            <i class="ri-arrow-down-wide-fill arrow-icon text-[var(--white)] mx-2 transition-transform duration-500"></i>
+        </a>
+        <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-60 md:w-90 bg-[var(--primary-color-900)] shadow-md rounded-3xl text-md overflow-hidden z-10 font-medium">
+            <a href="#" class="block px-8 py-3 hover:bg-[var(--primary-color-800)] text-white">Profile</a>
+            <a href="#" class="block px-8 py-3 hover:bg-[var(--primary-color-800)] text-white">Change Logo</a>
+            <a href="#" class="block px-8 py-3 hover:bg-[var(--primary-color-800)] text-white">Settings</a>
+            <a href="#" class="block px-8 py-3 text-[var(--error)] hover:bg-[var(--primary-color-800)]">Logout</a>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="w-90 md:w-full px-4 py-5 flex flex-col justify-start items-start gap-2 md:gap-4 overflow-y-scroll [&::-webkit-scrollbar]:w-3
+                            [&::-webkit-scrollbar-track]:rounded-full
+                            [&::-webkit-scrollbar-track]:bg-[var(--white)]]
+                            [&::-webkit-scrollbar-thumb]:rounded-full
+                            [&::-webkit-scrollbar-thumb]:bg-[var(--primary-color-900)]">
+        <div class="flex gap-2 md:gap-5 w-full text-[var(--primary-color-900)] flex-2 md:flex-1">
+            <div class="self-stretch w-full min-w-64 max-w-90 px-3.5 py-4 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex justify-between items-center overflow-hidden">
+                <div class="px-2.5 inline-flex flex-col justify-start items-start gap-1 md:gap-2 overflow-hidden">
+                    <div class="px-2.5 py-0.5 bg-[var(--secondary-color-600)] rounded-lg inline-flex justify-center items-center gap-2.5 overflow-hidden">
+                        <i class="ri-graduation-cap-fill"></i>
+                        <div class="justify-start text-[var(--primary-color-900)] text-base font-normal font-['DM_Sans'] leading-none">Students</div>
+                    </div>
+                    <div class="text-center justify-start text-[var(--primary-color-900)] text-3xl font-medium font-['DM_Sans'] leading-9">225</div>
+                </div>
+                <a class="bg-[var(--primary-color-800)] rounded-[10px] inline-flex flex-col justify-center items-center gap-2.5 overflow-hidden h-12 w-12" href="">
+                    <i class="ri-external-link-fill text-[var(--white)] text-xl"></i>
+                </a>
+            </div>
+            <div class="self-stretch w-full min-w-64 max-w-90 px-3.5 py-4 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex justify-between items-center overflow-hidden">
+                <div class="px-2.5 inline-flex flex-col justify-start items-start gap-2 overflow-hidden">
+                    <div class="px-2.5 py-0.5 bg-[var(--secondary-color-600)] rounded-lg inline-flex justify-center items-center gap-2.5 overflow-hidden">
+                        <i class="ri-account-box-fill"></i>
+                        <div class="justify-start text-[var(--primary-color-900)] text-base font-normal font-['DM_Sans'] leading-none">Staff</div>
+                    </div>
+                    <div class="text-center justify-start text-[var(--primary-color-900)] text-3xl font-medium font-['DM_Sans'] leading-9">225</div>
+                </div>
+                <a class="bg-[var(--primary-color-800)] rounded-[10px] inline-flex flex-col justify-center items-center gap-2.5 overflow-hidden h-12 w-12" href="">
+                    <i class="ri-external-link-fill text-[var(--white)] text-xl"></i>
+                </a>
+            </div>
+            <div class="self-stretch w-full min-w-64 max-w-90 px-3.5 py-4 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex justify-between items-center overflow-hidden">
+                <div class="px-2.5 inline-flex flex-col justify-start items-start gap-2 overflow-hidden">
+                    <div class="px-2.5 py-0.5 bg-[var(--secondary-color-600)] rounded-lg inline-flex justify-center items-center gap-2.5 overflow-hidden">
+                        <i class="ri-money-rupee-circle-fill"></i>
+                        <div class="justify-start text-[var(--primary-color-900)] text-base font-normal font-['DM_Sans'] leading-none">Fees</div>
+                    </div>
+                    <div class="text-center justify-start text-[var(--primary-color-900)] text-3xl font-medium font-['DM_Sans'] leading-9">₹24,209</div>
+                </div>
+                <a class="bg-[var(--primary-color-800)] rounded-[10px] inline-flex flex-col justify-center items-center gap-2.5 overflow-hidden h-12 w-12" href="">
+                    <i class="ri-external-link-fill text-[var(--white)] text-xl"></i>
+                </a>
+            </div>
+            <div class="self-stretch w-full min-w-64 max-w-90 px-3.5 py-4 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex justify-between items-center overflow-hidden">
+                <div class="px-2.5 inline-flex flex-col justify-start items-start gap-2 overflow-hidden">
+                    <div class="px-2.5 py-0.5 bg-[var(--secondary-color-600)] rounded-lg inline-flex justify-center items-center gap-2.5 overflow-hidden">
+                        <i class="ri-bill-fill text-[--primary-color-900]"></i>
+                        <div class="justify-start text-[var(--primary-color-900)] text-base font-normal font-['DM_Sans'] leading-none">Receipts</div>
+                    </div>
+                    <div class="text-center justify-start text-[var(--primary-color-900)] text-3xl font-medium font-['DM_Sans'] leading-9">10</div>
+                </div>
+                <a class="bg-[var(--primary-color-800)] rounded-[10px] inline-flex flex-col justify-center items-center gap-2.5 overflow-hidden h-12 w-12" href="">
+                    <i class="ri-external-link-fill text-[var(--white)] text-xl"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="flex gap-5 w-full text-[var(--primary-color-900)] flex-col md:flex-row">
+
+            <!-- Students Graph -->
+            <div class="w-full md:w-[718px] p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-between items-start gap-2.5 overflow-hidden">
+                <div>
+                    <p class="text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-none mb-3">No. of Students</p>
+                    <div class="w-24 h-0 outline outline-[3px] outline-offset-[-1.50px] outline-rose-400" ></div>
+
+                </div>
+                <div class="self-stretch inline-flex justify-center items-end gap-1 overflow-hidden">
+                    <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                        <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                            <div class="w-5 h-36 bg-[var(--primary-color-900)] rounded-full"></div>
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">Nur.</div>
+                        </div>
+                    </div>
+                    <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                        <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                            <div class="w-5 h-16 bg-[var(--primary-color-900)] rounded-full"></div>
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">LKG</div>
+                        </div>
+                    </div>
+                    <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                        <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                            <div class="w-5 h-20 bg-[var(--primary-color-900)] rounded-full"></div>
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">UKG</div>
+                        </div>
+                    </div>
+                    <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                        <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                            <div class="w-5 h-36 bg-[var(--primary-color-900)] rounded-full"></div>
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">1st</div>
+                        </div>
+                    </div>
+                    <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                        <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                            <div class="w-5 h-8 bg-[var(--primary-color-900)] rounded-full"></div>
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">2nd</div>
+                        </div>
+                    </div>
+                    <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                        <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                            <div class="w-5 h-24 bg-[var(--primary-color-900)] rounded-full"></div>
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">3rd</div>
+                        </div>
+                    </div>
+                    <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                        <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                            <div class="w-5 h-36 bg-[var(--primary-color-900)] rounded-full"></div>
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">4th</div>
+                        </div>
+                    </div>
+                    <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                        <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                            <div class="w-5 h-26 bg-[var(--primary-color-900)] rounded-full"></div>
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">5th</div>
+                        </div>
+                    </div>
+                    <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                        <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                            <div class="w-5 h-28 bg-[var(--primary-color-900)] rounded-full"></div>
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">6th</div>
+                        </div>
+                    </div>
+                    <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                        <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                            <div class="w-5 h-23 bg-[var(--primary-color-900)] rounded-full"></div>
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">7th</div>
+                        </div>
+                    </div>
+                    <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                        <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                            <div class="w-5 h-12 bg-[var(--primary-color-900)] rounded-full"></div>
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">8th</div>
+                        </div>
+                    </div>
+                    <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                        <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                            <div class="w-5 h-36 bg-[var(--primary-color-900)] rounded-full"></div>
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">9th</div>
+                        </div>
+                    </div>
+                    <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                        <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                            <div class="w-5 h-10 bg-[var(--primary-color-900)] rounded-full"></div>
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">10th</div>
+                        </div>
+                    </div>
+                    <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                        <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                            <div class="w-5 h-14 bg-[var(--primary-color-900)] rounded-full"></div>
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">11th</div>
+                        </div>
+                    </div>
+                    <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
+                        <div class="h-full flex flex-col justify-end items-center gap-3 overflow-hidden">
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-loose">20</div>
+                            <div class="w-5 h-36 bg-[var(--primary-color-900)] rounded-full"></div>
+                            <div class="self-stretch text-center justify-start text-[var(--primary-color-900)] text-base font-bold font-['DM_Sans'] leading-none">12th</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Calender -->
+            <div class="self-stretch min-w-[500px] p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-start items-start gap-2.5 overflow-hidden transition-width">
+                <p class="justify-center text-blue-900 text-xl font-bold font-['DM_Sans'] leading-none">Calender</p>
+                <div class="w-24 h-0 outline outline-[3px] outline-offset-[-1.50px] outline-rose-400"></div>
+                <div class="self-stretch flex-1 rounded-md inline-flex flex-col md:flex-row justify-center items-center gap-3.5">
+                    <div class="flex-1/2 self-stretch inline-flex flex-col justify-start items-start overflow-hidden">
+                        <div class="calendar">
+                            <div class="calendar-header">
+                                <span class="month-picker" id="month-picker"> January</span>
+                                <div class="year-picker">
+                                <span class="year-change" id="prev-year">
+                                    <pre><i class="ri-arrow-left-s-line"></i></pre>
+                                </span>
+                                <span id="year">2023</span>
+                                <span class="year-change" id="next-year">
+                                    <pre><i class="ri-arrow-right-s-line"></i></pre>
+                                </span>
+                                </div>
+                            </div>
+
+                        <div class="calendar-body">
+                                <div class="calendar-week-day">
+                                    <div>Sun</div>
+                                    <div>Mon</div>
+                                    <div>Tue</div>
+                                    <div>Wed</div>
+                                    <div>Thu</div>
+                                    <div>Fri</div>
+                                    <div>Sat</div>
+                                </div>
+                                
+                                <div class="calendar-days">
+                                    <div>1
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div>2</div>
+                                    <div>3</div>
+                                    <div>4</div>
+                                    <div>5</div>
+                                    <div>6</div>
+                                    <div>7</div>
+                                    <div>1</div>
+                                    <div>2</div>
+                                    <div>3</div>
+                                    <div>4</div>
+                                    <div>5</div>
+                                    <div>6</div>
+                                    <div>7</div>
+                                    
+                                </div>
+                            </div>
+                            <div class="month-list"></div>
+                        </div>
+                    </div>
+                    <div class="w-30 h-0 md:w-0 md:h-44 outline outline-1 outline-offset-[-0.50px] outline-zinc-400"></div>
+                    <div class="flex-1/2 self-stretch px-3 py-2 inline-flex flex-col justify-start items-start gap-7">
+                        <div class="inline-flex justify-start items-start gap-2.5">
+                            <div class="justify-center text-blue-800 text-lg font-medium font-['DM_Sans'] leading-7">Students’ Birthday</div>
+                        </div>
+                        <div class="h-55 overflow-y-scroll [&::-webkit-scrollbar]:w-2
+                        [&::-webkit-scrollbar-track]:rounded-full
+                        [&::-webkit-scrollbar-track]:bg-none]
+                        [&::-webkit-scrollbar-thumb]:rounded-full
+                        [&::-webkit-scrollbar-thumb]:bg-[var(--primary-color-500)]">
+                            <div class="w-56 h-25 mr-2 bg-white flex justify-start items-center gap-3 font-['DM_Sans'] border-b-2 border-[var(--primary-color-500)]">
+                                <div class="h-16 w-14 flex items-center justify-center overflow-hidden relative">
+                                    <img class="w-14 h-14 left-0 top-0 rounded-full" src="https://placehold.co/56x56" />
+                                    <div class="w-7 h-7 text-2xl absolute right-0 bottom-0">🎉</div>
+                                </div>
+                                <div class="flex-1 inline-flex flex-col justify-start items-center overflow-hidden">
+                                    <div class="self-stretch text-center justify-center text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">Aakriti Mishra</div>
+                                    <div class="w-12 outline outline-[2px] outline-offset-[-1.50px] outline-rose-400 mb-3"></div>
+                                    <div class="flex w-full justify-between text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight mb-1">
+                                        <p>Enr.No.: <span class="text-black font-medium">392</span></p>
+                                        <p>Class: <span class="text-black font-medium">3rd</span></p>
+                                    </div>
+                                    <p class="flex w-full text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight mb-1">Father: <span class="ml-1 text-black font-medium">Mr. Mishra</span></p>
+                                    <p class="flex w-full text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight">Phone: <span class="ml-1 text-black font-medium">+91 9876543210</span></p>
+                                </div>
+                            </div>
+                            <div class="w-56 h-25 bg-white flex justify-start items-center gap-3 font-['DM_Sans'] border-b border-[var(--primary-color-500)]">
+                                <div class="h-16 w-14 flex items-center justify-center overflow-hidden relative">
+                                    <img class="w-14 h-14 left-0 top-0 rounded-full" src="https://placehold.co/56x56" />
+                                    <div class="w-7 h-7 text-2xl absolute right-0 bottom-0">🎉</div>
+                                </div>
+                                <div class="flex-1 inline-flex flex-col justify-start items-center overflow-hidden">
+                                    <div class="self-stretch text-center justify-center text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">Aakriti Mishra</div>
+                                    <div class="w-12 outline outline-[2px] outline-offset-[-1.50px] outline-rose-400 mb-3"></div>
+                                    <div class="flex w-full justify-between text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight mb-1">
+                                        <p>Enr.No.: <span class="text-black font-medium">392</span></p>
+                                        <p>Class: <span class="text-black font-medium">3rd</span></p>
+                                    </div>
+                                    <p class="flex w-full text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight mb-1">Father: <span class="ml-1 text-black font-medium">Mr. Mishra</span></p>
+                                    <p class="flex w-full text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight">Phone: <span class="ml-1 text-black font-medium">+91 9876543210</span></p>
+                                </div>
+                            </div>
+                            <div class="w-56 h-25 bg-white flex justify-start items-center gap-3 font-['DM_Sans'] border-b-2 border-[var(--primary-color-500)]">
+                                <div class="h-16 w-14 flex items-center justify-center overflow-hidden relative">
+                                    <img class="w-14 h-14 left-0 top-0 rounded-full" src="https://placehold.co/56x56" />
+                                    <div class="w-7 h-7 text-2xl absolute right-0 bottom-0">🎉</div>
+                                </div>
+                                <div class="flex-1 inline-flex flex-col justify-start items-center overflow-hidden">
+                                    <div class="self-stretch text-center justify-center text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">Aakriti Mishra</div>
+                                    <div class="w-12 outline outline-[2px] outline-offset-[-1.50px] outline-rose-400 mb-3"></div>
+                                    <div class="flex w-full justify-between text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight mb-1">
+                                        <p>Enr.No.: <span class="text-black font-medium">392</span></p>
+                                        <p>Class: <span class="text-black font-medium">3rd</span></p>
+                                    </div>
+                                    <p class="flex w-full text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight mb-1">Father: <span class="ml-1 text-black font-medium">Mr. Mishra</span></p>
+                                    <p class="flex w-full text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight">Phone: <span class="ml-1 text-black font-medium">+91 9876543210</span></p>
+                                </div>
+                            </div>
+                            <div class="w-56 h-25 bg-white flex justify-start items-center gap-3 font-['DM_Sans'] border-b border-[var(--primary-color-500)]">
+                                <div class="h-16 w-14 flex items-center justify-center overflow-hidden relative">
+                                    <img class="w-14 h-14 left-0 top-0 rounded-full" src="https://placehold.co/56x56" />
+                                    <div class="w-7 h-7 text-2xl absolute right-0 bottom-0">🎉</div>
+                                </div>
+                                <div class="flex-1 inline-flex flex-col justify-start items-center overflow-hidden">
+                                    <div class="self-stretch text-center justify-center text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">Aakriti Mishra</div>
+                                    <div class="w-12 outline outline-[2px] outline-offset-[-1.50px] outline-rose-400 mb-3"></div>
+                                    <div class="flex w-full justify-between text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight mb-1">
+                                        <p>Enr.No.: <span class="text-black font-medium">392</span></p>
+                                        <p>Class: <span class="text-black font-medium">3rd</span></p>
+                                    </div>
+                                    <p class="flex w-full text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight mb-1">Father: <span class="ml-1 text-black font-medium">Mr. Mishra</span></p>
+                                    <p class="flex w-full text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight">Phone: <span class="ml-1 text-black font-medium">+91 9876543210</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        
+        <div class="flex gap-5 h-full w-full flex-col md:flex-row">
+            <!-- Table -->
+            <div class="h-full w-full">
+                <div class="h-full w-full p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-start items-start gap-2.5">
+                    <p class="justify-center text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-none">Students & Staff Record</p>
+                    <div class="w-24 outline outline-[3px] outline-offset-[-1.50px] outline-[var(--secondary-color-600)] mb-2"></div>
+                                
+                    <div class="h-70 overflow-y-auto border-2 border-[var(--primary-color-900)] rounded-[10px] w-full overflow-x-auto [&::-webkit-scrollbar]:w-2
+                        [&::-webkit-scrollbar-track]:rounded-full
+                        [&::-webkit-scrollbar-track]:bg-none]
+                        [&::-webkit-scrollbar-thumb]:rounded-full
+                        [&::-webkit-scrollbar-thumb]:bg-[var(--primary-color-500)]">
+                        <table class="text-sm md:text-lg min-w-full table-fixed border-separate border-spacing-0 text-[var(--primary-color-900)]">
+                            <thead class="sticky top-0 z-10 bg-[var(--primary-color-500)]">
+                                <tr>
+                                    <th class="py-1 px-3 border border-[var(--primary-color-600)] text-left">S.No</th>
+                                    <th class="py-1 px-3 border border-[var(--primary-color-600)] text-left">Name</th>
+                                    <th class="py-1 px-3 border border-[var(--primary-color-600)] text-left">Profession</th>
+                                    <th class="py-1 px-3 border border-[var(--primary-color-600)] text-left">Enr.No.</th>
+                                    <th class="py-1 px-3 border border-[var(--primary-color-600)] text-left">Number</th>
+                                    <th class="py-1 px-3 border border-[var(--primary-color-600)] text-left">DoB</th>
+                                    <th class="py-1 px-3 border border-[var(--primary-color-600)] text-left">Father</th>
+                                    <th class="py-1 px-3 border border-[var(--primary-color-600)] text-left">Edit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">1.</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">2.</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">3.</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">4.</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">5.</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">1.</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">2.</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">3.</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">4.</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">5.</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Aaditya Singh</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">8th-A</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">852</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">+91 9876543219</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">01/01/2000</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)]">Rajesh Kumar</td>
+                                    <td class="py-1 px-3 border border-[var(--primary-color-600)] cursor-pointer">✏️</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- Student Search -->
+            <div class="w-full md:w-90 self-stretch p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-start items-start gap-2.5 overflow-hidden">
+                <div class="self-stretch justify-center text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-none">Search Student</div>
+                <div class="w-24 outline outline-[3px] outline-offset-[-1.50px] outline-rose-400"></div>
+                <form class="w-full h-40 py-2.5 inline-flex justify-center items-start gap-2.5 overflow-hidden">
+                    <input class="text-[var(--primary-color-900)] h-10 w-full px-3 py-1.5 rounded-[10px] outline outline-1 outline-offset-[-1px] outline-[var(--light-neutral-700)] flex justify-start items-center gap-2.5 overflow-hidden w-full" placeholder="Search"></input>
+                    <button onclick="SubmitEvent" class="w-14 h-10 relative bg-[var(--primary-color-800)] rounded-[10px] overflow-hidden cursor-pointer">
+                        <i class="ri-search-2-line text-[var(--white)]"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+  </div>
+
+  <script>
+    function toggleDropdown(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
+    }
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('w-64');
+      sidebar.classList.toggle('w-20');
+    }
+
+    function toggleMobileNav() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      sidebar.classList.toggle('hidden');
+      overlay.classList.toggle('hidden');
+    }
+  </script>
+  <script src="./index.js"></script>
+</body>
+</html>

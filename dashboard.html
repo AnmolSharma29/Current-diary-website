@@ -14,57 +14,175 @@
 </head>
 <body class="flex flex-row h-screen w-full overflow-clip font-[DM_Sans] overflow -y-auto">
     <!-- Side Nav Bar -->
-    <div class="h-full bg-[var(--primary-color-900)] w-[210px] px-[15px] py-[20px] flex flex-col justify-between">
+    <div class="h-full bg-[var(--primary-color-900)] px-5 py-[20px] flex flex-col justify-between">
         <div class="flex flex-col gap-2 font-['DM_Sans']">
             <div class="flex flex-row text-[var(--primary-color-500)] font-afacad-900 text-[24px] line-height-100 text-[var(--white)] items-center gap-2">
                 <img src="./static/Current-diary-logo.svg" alt="current-diary-logo" class="w-[55px]">
-                Current <br> Diary
+                <p class="hidden md:block">Current <br> Diary</p>
             </div>
-            <div class="flex flex-col">
-                <button class="menu-button"><i class="ri-home-2-fill mr-2"></i>Dashboard</button>
-                <button class="menu-button"><i class="ri-school-fill mr-2"></i>School</button>
-                <button class="menu-button"><i class="ri-add-line mr-2"></i>Admission</button>
-                <button class="menu-button"><i class="ri-medal-fill mr-2"></i>Result</button>
-                <button class="menu-button"><i class="ri-artboard-fill mr-2"></i>Notices</button>
-                <button class="menu-button"><i class="ri-money-rupee-circle-fill mr-2"></i>Fees</button>
-                <button class="menu-button"><i class="ri-inbox-unarchive-fill mr-2"></i>Inventory</button>
-                <button class="menu-button"><i class="ri-book-shelf-fill mr-2"></i>Library</button>
-                <button class="menu-button"><i class="ri-pass-pending-fill mr-2"></i>Visitor</button>
+            <div class="h-130 overflow-y-scroll no-scrollbar">
+                <ul class="flex flex-col">
+                    <li><a href="#" class="menu-button"><i class="ri-home-2-fill mr-2"></i><span class="hidden md:block">Dashboard</span></a>
+                    </li>
+                    <li><a href="#" class="menu-button"><i class="ri-school-fill mr-2"></i><span class="hidden md:block">School</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="#" class="sub-menu-button">Staff & Student Info</a></li>
+                            <li><a href="#" class="sub-menu-button">Birthday Record</a></li>
+                            <li><a href="#" class="sub-menu-button">Reports</a></li>
+                            <li><a href="#" class="sub-menu-button">Edit Class Record in Once</a></li>
+                            <li><a href="#" class="sub-menu-button">Add New Student</a></li>
+                            <li><a href="#" class="sub-menu-button">Add New Staff</a></li>
+                            <li><a href="#" class="sub-menu-button">Create Web User</a></li>
+                            <li><a href="#" class="sub-menu-button">Image - Staff & Student Info</a></li>
+                            <li><a href="#" class="sub-menu-button">Admit Card</a></li>
+                            <li><a href="#" class="sub-menu-button">ID Card</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="menu-button"><i class="ri-add-line mr-2"></i><span class="hidden md:block">Admission</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="#" class="sub-menu-button">Registration Form</a></li>
+                            <li><a href="#" class="sub-menu-button">Registration Record</a></li>
+                            <li><a href="#" class="sub-menu-button">Online Registration Form</a></li>
+                            <li><a href="#" class="sub-menu-button">Admission Form</a></li>
+                            <li><a href="#" class="sub-menu-button">Admission Record</a></li>
+                            <li><a href="#" class="sub-menu-button">Enquiry Form</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="menu-button"><i class="ri-medal-fill mr-2"></i><span class="hidden md:block">Attendance</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="#" class="sub-menu-button">Mark Attendance</a></li>
+                            <li><a href="#" class="sub-menu-button">Mark Old Attendance</a></li>
+                            <li><a href="#" class="sub-menu-button">Check Attendance</a></li>
+                            <li><a href="#" class="sub-menu-button">Biometric Attendance Report</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="menu-button"><i class="ri-medal-fill mr-2"></i><span class="hidden md:block">Result</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="#" class="sub-menu-button">Upload Marks</a></li>
+                            <li><a href="#" class="sub-menu-button">Check Uploaded Marks</a></li>
+                            <li><a href="#" class="sub-menu-button">Edit Marks</a></li>
+                            <li><a href="#" class="sub-menu-button">Edit Exam Format</a></li>
+                            <li><a href="#" class="sub-menu-button">Change Subject Positions</a></li>
+                            <li><a href="#" class="sub-menu-button">Consolidated Marksheet</a></li>
+                            <li><a href="#" class="sub-menu-button">Tabulation Sheet</a></li>
+                            <li><a href="#" class="sub-menu-button">Mean Score Sheet</a></li>
+                            <li><a href="#" class="sub-menu-button">Print Report Card</a></li>
+                            <li><a href="#" class="sub-menu-button">Design Report Card Format</a></li>
+                            <li><a href="#" class="sub-menu-button">Show Designed Format</a></li>
+                            <li><a href="#" class="sub-menu-button">Assign Teachers</a></li>
+                            <li><a href="#" class="sub-menu-button">Assigned Teachers</a></li>
+                            <li><a href="#" class="sub-menu-button">Check Uploaded Marks</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="menu-button"><i class="ri-artboard-fill mr-2"></i><span class="hidden md:block">Notices</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="#" class="sub-menu-button">Template</a></li>
+                            <li><a href="#" class="sub-menu-button">Upload Notice</a></li>
+                            <li><a href="#" class="sub-menu-button">Class Circular Record</a></li>
+                            <li><a href="#" class="sub-menu-button">Homework</a></li>
+                            <li><a href="#" class="sub-menu-button">Transport</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="menu-button"><i class="ri-money-rupee-circle-fill mr-2"></i><span class="hidden md:block">Fees</span></a>             
+                        <ul class="sub-menu">
+                            <li><a href="#" class="sub-menu-button">Student Info</a></li>
+                            <li><a href="#" class="sub-menu-button">Student Info</a></li>
+                            <li><a href="#" class="sub-menu-button">Student Info</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="menu-button"><i class="ri-inbox-unarchive-fill mr-2"></i><span class="hidden md:block">Inventory</span></a>                
+                        <ul class="sub-menu">
+                            <li><a href="#" class="sub-menu-button">Student Info</a></li>
+                            <li><a href="#" class="sub-menu-button">Student Info</a></li>
+                            <li><a href="#" class="sub-menu-button">Student Info</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="menu-button"><i class="ri-book-shelf-fill mr-2"></i><span class="hidden md:block">Library</span></a>               
+                        <ul class="sub-menu">
+                            <li><a href="#" class="sub-menu-button">Student Info</a></li>
+                            <li><a href="#" class="sub-menu-button">Student Info</a></li>
+                            <li><a href="#" class="sub-menu-button">Student Info</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="menu-button"><i class="ri-pass-pending-fill mr-2"></i><span class="hidden md:block">Visitor</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="#" class="sub-menu-button">Student Info</a></li>
+                            <li><a href="#" class="sub-menu-button">Student Info</a></li>
+                            <li><a href="#" class="sub-menu-button">Student Info</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="flex flex-col">
-            <button class="menu-button"><i class="ri-settings-3-fill mr-2"></i>Settings</button>
-            <button class="menu-button"><i class="ri-logout-box-r-fill mr-2"></i>Logout</button>
-        </div>
+        <ul class="flex flex-col bg-blue-900 rounded-lg">
+            <li><a class="menu-button" href="#"><i class="ri-settings-3-fill mr-2"></i><span class="hidden md:block">Settings</span></a></li>
+            <li><a class="menu-button" href="#"><i class="ri-logout-box-r-fill mr-2"></i><span class="hidden md:block">Logout</span></a></li>
+        </ul>
     </div>
 
     <!-- Main Dashboard -->
-    <div class="h-full flex-1 flex flex-col">
+    <div class="h-full w-full flex-1 flex flex-col">
 
         <!-- Top Bar -->
-        <div class="self-stretch min-w-[780px] px-7 py-2.5 border-b border-blue-800 inline-flex justify-between items-center overflow-hidden">
-            <h4 class="justify-start text-blue-900 text-3xl font-medium font-['DM_Sans']">Dashboard</h4>
+        <div class="w-full px-7 py-1 border-b border-blue-800 inline-flex justify-between items-center overflow-y-visible relative">
+            <h4 class="justify-start text-[var(--primary-color-900)] text-3xl font-medium font-['DM_Sans'] hidden md:block">Dashboard</h4>
                 <div class="flex justify-end items-center gap-5">
-                    <i class="ri-notification-3-fill text-2xl left-[2px] top-[2px] text-[var(--primary-color-900)]"></i>
-                    <div data-property-1="Default" class="pl-2.5 pr-5 py-2.5 bg-blue-900 rounded-[100px] flex justify-end items-center gap-5 overflow-hidden">
-                        <div class="w-12 h-12 p-2.5 bg-white rounded-[100px] flex justify-center items-center gap-2.5 overflow-hidden">
-                            <img class="w-full h-full" src="" />
+                    <i class="ri-notification-3-fill text-2xl left-[2px] top-[2px] text-[var(--primary-color-900)] top-[25%] hidden md:block"></i>
+                    <!-- <a href="#" class="pl-2.5 pr-5 py-2.5 bg-blue-900 rounded-[100px] flex flex-col justify-end items-center gap-5 overflow-hidden">
+                        <div class="flex">
+                            <div class="w-12 h-12 p-2.5 bg-white rounded-[100px] flex justify-center items-center gap-2.5 overflow-hidden">
+                                <img class="w-full h-full" src="" />
+                            </div>
+                            <div class="justify-start"><span class="text-neutral-100 text-xl font-bold font-['DM_Sans'] leading-none">Green Land Public School<br/></span><span class="text-indigo-200 text-base font-normal font-['DM_Sans'] leading-none">Admin</span></div>
+                            <i class="ri-arrow-down-wide-fill text-[var(--white)]"></i>
                         </div>
-                        <div class="justify-start"><span class="text-neutral-100 text-xl font-bold font-['DM_Sans'] leading-none">Green Land Public School<br/></span><span class="text-indigo-200 text-base font-normal font-['DM_Sans'] leading-none">Admin</span></div>
-                        <i class="ri-arrow-down-wide-fill text-[var(--white)]"></i>
+                        <a href="#">
+                            <span>Profile</span>
+                        </a>
+                        <a href="#">
+                            <span>Profile</span>
+                        </a>
+                        <a href="#">
+                            <span>Profile</span>
+                        </a>
+                        <a href="#">
+                            <span>Profile</span>
+                        </a>
+                    </a>-->
+                    <div class="bg-[var(--primary-color-900)] rounded-4xl font-['DM_Sans'] relative">
+                        <a id="dropdownToggle" class="flex px-2 py-2 gap-2 items-center profile cursor-pointer">
+                            <div class="w-12 h-12 p-2.5 bg-white rounded-[100px] flex justify-center items-center gap-2.5 overflow-hidden">
+                                <img class="w-full h-full" src="/static/Green_Land_Public_School_logo_2-01_(4)[1].png" />
+                            </div>
+                            <div class="justify-start"><span class="text-neutral-100 md:text-xl font-bold font-['DM_Sans'] leading-none">Green Land Public School<br/></span><span class="text-indigo-200 text-base font-normal font-['DM_Sans'] leading-none">Admin</span></div>
+                            <i class="ri-arrow-down-wide-fill arrow-icon text-[var(--white)] mx-2 transition-transform duration-500"></i>
+                        </a>
+                        <!-- <ul class="profile-menu hidden">
+                            <li><a href="#" class="profile-sub-menu">Profile</a></li>
+                            <li><a href="#" class="profile-sub-menu">Change Logo</a></li>
+                            <li><a href="#" class="profile-sub-menu">Change Password</a></li>
+                            <li><a href="#" class="profile-sub-menu">Settings</a></li>
+                            <li><a href="#" class="profile-sub-menu">Logout</a></li>
+                        </ul> -->
+                        <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-60 md:w-90 bg-[var(--primary-color-900)] shadow-md rounded-3xl text-md overflow-hidden z-10 font-medium">
+                            <a href="#" class="block px-8 py-3 hover:bg-[var(--primary-color-800)] text-white">Profile</a>
+                            <a href="#" class="block px-8 py-3 hover:bg-[var(--primary-color-800)] text-white">Change Logo</a>
+                            <a href="#" class="block px-8 py-3 hover:bg-[var(--primary-color-800)] text-white">Settings</a>
+                            <a href="#" class="block px-8 py-3 text-[var(--error)] hover:bg-[var(--primary-color-800)]">Logout</a>
+                        </div>
                     </div>
                 </div>
         </div>
 
         <!-- Main Content -->
-        <div class="self-stretch px-4 py-5 flex flex-col justify-start items-start gap-4 overflow-y-scroll [&::-webkit-scrollbar]:w-3
+        <div class="w-90 md:w-full px-4 py-5 flex flex-col justify-start items-start gap-2 md:gap-4 overflow-y-scroll [&::-webkit-scrollbar]:w-3
                             [&::-webkit-scrollbar-track]:rounded-full
                             [&::-webkit-scrollbar-track]:bg-[var(--white)]]
                             [&::-webkit-scrollbar-thumb]:rounded-full
                             [&::-webkit-scrollbar-thumb]:bg-[var(--primary-color-900)]">
-            <div class="flex gap-5 w-full text-[var(--primary-color-900)]">
+            <div class="flex gap-2 md:gap-5 w-full text-[var(--primary-color-900)] flex-1/2 md:flex-1/4">
                 <div class="self-stretch w-full min-w-64 max-w-90 px-3.5 py-4 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex justify-between items-center overflow-hidden">
-                    <div class="px-2.5 inline-flex flex-col justify-start items-start gap-2 overflow-hidden">
+                    <div class="px-2.5 inline-flex flex-col justify-start items-start gap-1 md:gap-2 overflow-hidden">
                         <div class="px-2.5 py-0.5 bg-[var(--secondary-color-600)] rounded-lg inline-flex justify-center items-center gap-2.5 overflow-hidden">
                             <i class="ri-graduation-cap-fill"></i>
                             <div class="justify-start text-[var(--primary-color-900)] text-base font-normal font-['DM_Sans'] leading-none">Students</div>
@@ -113,13 +231,14 @@
                 </div>
             </div>
             
-            <div class="flex gap-5 w-full text-[var(--primary-color-900)]">
+            <div class="flex gap-5 w-full text-[var(--primary-color-900)] flex-col md:flex-row">
 
                 <!-- Students Graph -->
-                <div class="w-[718px] p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-between items-start gap-2.5 overflow-hidden">
+                <div class="w-full md:w-[718px] p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-between items-start gap-2.5 overflow-hidden">
                     <div>
                         <p class="text-center justify-start text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-none mb-3">No. of Students</p>
-                        <div class="w-24 h-0 outline outline-[3px] outline-offset-[-1.50px] outline-rose-400"></div>
+                        <div class="w-24 h-0 outline outline-[3px] outline-offset-[-1.50px] outline-rose-400" ></div>
+
                     </div>
                     <div class="self-stretch inline-flex justify-center items-end gap-1 overflow-hidden">
                         <div class="w-10 inline-flex flex-col justify-end items-center gap-2.5 overflow-hidden">
@@ -232,50 +351,135 @@
 
 
                 <!-- Calender -->
-                <div class="self-stretch self-stretch min-w-[500px] p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-start items-start gap-2.5 overflow-hidden">
+                <div class="self-stretch min-w-[500px] p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-start items-start gap-2.5 overflow-hidden transition-width">
                     <p class="justify-center text-blue-900 text-xl font-bold font-['DM_Sans'] leading-none">Calender</p>
                     <div class="w-24 h-0 outline outline-[3px] outline-offset-[-1.50px] outline-rose-400"></div>
-                    <div class="self-stretch flex-1 rounded-md inline-flex justify-center items-center gap-3.5">
-                        <div class="flex-1 self-stretch inline-flex flex-col justify-start items-start overflow-hidden">
-                            <div class="calender">
-                                <div class="header">
-                                    <button class="prevBtn">
-                                        <i class="ri-arrow-left-s-line"></i>
-                                    </button>
-                                    <div class="monthYear" id="monthYear"></div>
-                                    <button class="nextBtn">
-                                        <i class="ri-arrow-right-s-line"></i>
-                                    </button>
-                                    <div class="days">
-                                        <div class="day">Mon</div>
-                                        <div class="day">Tues</div>
-                                        <div class="day">Wed</div>
-                                        <div class="day">Thurs</div>
-                                        <div class="day">Fri</div>
-                                        <div class="day">Sat</div>
-                                        <div class="day">Sun</div>
+                    <div class="self-stretch flex-1 rounded-md inline-flex flex-col md:flex-row justify-center items-center gap-3.5">
+                        <div class="flex-1/2 self-stretch inline-flex flex-col justify-start items-start overflow-hidden">
+                            <div class="calendar">
+                                <div class="calendar-header">
+                                    <span class="month-picker" id="month-picker"> January</span>
+                                    <div class="year-picker">
+                                    <span class="year-change" id="prev-year">
+                                        <pre><i class="ri-arrow-left-s-line"></i></pre>
+                                    </span>
+                                    <span id="year">2023</span>
+                                    <span class="year-change" id="next-year">
+                                        <pre><i class="ri-arrow-right-s-line"></i></pre>
+                                    </span>
                                     </div>
-                                    <div class="dates" id="dates"></div>
                                 </div>
+
+                            <div class="calendar-body">
+                                    <div class="calendar-week-day">
+                                        <div>Sun</div>
+                                        <div>Mon</div>
+                                        <div>Tue</div>
+                                        <div>Wed</div>
+                                        <div>Thu</div>
+                                        <div>Fri</div>
+                                        <div>Sat</div>
+                                    </div>
+                                    
+                                    <div class="calendar-days">
+                                        <div>1
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div>2</div>
+                                        <div>3</div>
+                                        <div>4</div>
+                                        <div>5</div>
+                                        <div>6</div>
+                                        <div>7</div>
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>3</div>
+                                        <div>4</div>
+                                        <div>5</div>
+                                        <div>6</div>
+                                        <div>7</div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="month-list"></div>
                             </div>
                         </div>
-                        <div class="w-0 h-44 outline outline-1 outline-offset-[-0.50px] outline-zinc-400"></div>
-                        <div class="flex-1 self-stretch px-4 py-2.5 inline-flex flex-col justify-start items-start gap-7">
+                        <div class="w-30 h-0 md:w-0 md:h-44 outline outline-1 outline-offset-[-0.50px] outline-zinc-400"></div>
+                        <div class="flex-1/2 self-stretch px-3 py-2 inline-flex flex-col justify-start items-start gap-7">
                             <div class="inline-flex justify-start items-start gap-2.5">
                                 <div class="justify-center text-blue-800 text-lg font-medium font-['DM_Sans'] leading-7">Students’ Birthday</div>
                             </div>
-                            <div data-birthday="True" class="w-56 py-2 flex justify-start items-center gap-3">
-                                <div class="w-18 h-20 relative overflow-hidden">
-                                    <img class="w-14 h-14 left-0 top-0 absolute rounded-full" src="https://placehold.co/56x56" />
-                                    <div class="w-12 h-12 left-[34px] top-[34px] absolute absolute text-2xl">🎉</div>
+                            <div class="h-55 overflow-y-scroll [&::-webkit-scrollbar]:w-2
+                            [&::-webkit-scrollbar-track]:rounded-full
+                            [&::-webkit-scrollbar-track]:bg-none]
+                            [&::-webkit-scrollbar-thumb]:rounded-full
+                            [&::-webkit-scrollbar-thumb]:bg-[var(--primary-color-500)]">
+                                <div class="w-56 h-25 mr-2 bg-white flex justify-start items-center gap-3 font-['DM_Sans'] border-b-2 border-[var(--primary-color-500)]">
+                                    <div class="h-16 w-14 flex items-center justify-center overflow-hidden relative">
+                                        <img class="w-14 h-14 left-0 top-0 rounded-full" src="https://placehold.co/56x56" />
+                                        <div class="w-7 h-7 text-2xl absolute right-0 bottom-0">🎉</div>
+                                    </div>
+                                    <div class="flex-1 inline-flex flex-col justify-start items-center overflow-hidden">
+                                        <div class="self-stretch text-center justify-center text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">Aakriti Mishra</div>
+                                        <div class="w-12 outline outline-[2px] outline-offset-[-1.50px] outline-rose-400 mb-3"></div>
+                                        <div class="flex w-full justify-between text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight mb-1">
+                                            <p>Enr.No.: <span class="text-black font-medium">392</span></p>
+                                            <p>Class: <span class="text-black font-medium">3rd</span></p>
+                                        </div>
+                                        <p class="flex w-full text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight mb-1">Father: <span class="ml-1 text-black font-medium">Mr. Mishra</span></p>
+                                        <p class="flex w-full text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight">Phone: <span class="ml-1 text-black font-medium">+91 9876543210</span></p>
+                                    </div>
                                 </div>
-                                <div class="flex-1 inline-flex flex-col justify-start items-center overflow-hidden">
-                                    <div class="self-stretch text-center justify-center text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">Aakriti Mishra</div>
-                                    <div class="w-12 outline outline-[2px] outline-offset-[-1.50px] outline-rose-400"></div>
-                                    <div class="self-stretch justify-center"><span class="text-blue-800 text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight">Enr. No.:</span><span class="text-black text-base font-normal font-['DM_Sans'] leading-normal tracking-tight"> </span><span class="text-neutral-700 text-sm font-medium font-['DM_Sans'] leading-normal tracking-tight">392</span></div>
-                                    <div class="self-stretch justify-center"><span class="text-blue-800 text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight">Class:</span><span class="text-black text-base font-normal font-['DM_Sans'] leading-normal tracking-tight"> </span><span class="text-neutral-700 text-sm font-medium font-['DM_Sans'] leading-normal tracking-tight">3rd</span></div>
-                                    <div class="self-stretch justify-center"><span class="text-blue-800 text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight">Fathers:</span><span class="text-black text-base font-bold font-['DM_Sans'] leading-normal tracking-tight"> </span><span class="text-neutral-700 text-sm font-medium font-['DM_Sans'] leading-normal tracking-tight">Naresh</span></div>
-                                    <div class="self-stretch justify-center"><span class="text-blue-800 text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight">Phone:</span><span class="text-black text-base font-normal font-['DM_Sans'] leading-normal tracking-tight"> </span><span class="text-neutral-700 text-sm font-medium font-['DM_Sans'] leading-normal tracking-tight">9999999999</span></div>
+                                <div class="w-56 h-25 bg-white flex justify-start items-center gap-3 font-['DM_Sans'] border-b border-[var(--primary-color-500)]">
+                                    <div class="h-16 w-14 flex items-center justify-center overflow-hidden relative">
+                                        <img class="w-14 h-14 left-0 top-0 rounded-full" src="https://placehold.co/56x56" />
+                                        <div class="w-7 h-7 text-2xl absolute right-0 bottom-0">🎉</div>
+                                    </div>
+                                    <div class="flex-1 inline-flex flex-col justify-start items-center overflow-hidden">
+                                        <div class="self-stretch text-center justify-center text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">Aakriti Mishra</div>
+                                        <div class="w-12 outline outline-[2px] outline-offset-[-1.50px] outline-rose-400 mb-3"></div>
+                                        <div class="flex w-full justify-between text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight mb-1">
+                                            <p>Enr.No.: <span class="text-black font-medium">392</span></p>
+                                            <p>Class: <span class="text-black font-medium">3rd</span></p>
+                                        </div>
+                                        <p class="flex w-full text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight mb-1">Father: <span class="ml-1 text-black font-medium">Mr. Mishra</span></p>
+                                        <p class="flex w-full text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight">Phone: <span class="ml-1 text-black font-medium">+91 9876543210</span></p>
+                                    </div>
+                                </div>
+                                <div class="w-56 h-25 bg-white flex justify-start items-center gap-3 font-['DM_Sans'] border-b-2 border-[var(--primary-color-500)]">
+                                    <div class="h-16 w-14 flex items-center justify-center overflow-hidden relative">
+                                        <img class="w-14 h-14 left-0 top-0 rounded-full" src="https://placehold.co/56x56" />
+                                        <div class="w-7 h-7 text-2xl absolute right-0 bottom-0">🎉</div>
+                                    </div>
+                                    <div class="flex-1 inline-flex flex-col justify-start items-center overflow-hidden">
+                                        <div class="self-stretch text-center justify-center text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">Aakriti Mishra</div>
+                                        <div class="w-12 outline outline-[2px] outline-offset-[-1.50px] outline-rose-400 mb-3"></div>
+                                        <div class="flex w-full justify-between text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight mb-1">
+                                            <p>Enr.No.: <span class="text-black font-medium">392</span></p>
+                                            <p>Class: <span class="text-black font-medium">3rd</span></p>
+                                        </div>
+                                        <p class="flex w-full text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight mb-1">Father: <span class="ml-1 text-black font-medium">Mr. Mishra</span></p>
+                                        <p class="flex w-full text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight">Phone: <span class="ml-1 text-black font-medium">+91 9876543210</span></p>
+                                    </div>
+                                </div>
+                                <div class="w-56 h-25 bg-white flex justify-start items-center gap-3 font-['DM_Sans'] border-b border-[var(--primary-color-500)]">
+                                    <div class="h-16 w-14 flex items-center justify-center overflow-hidden relative">
+                                        <img class="w-14 h-14 left-0 top-0 rounded-full" src="https://placehold.co/56x56" />
+                                        <div class="w-7 h-7 text-2xl absolute right-0 bottom-0">🎉</div>
+                                    </div>
+                                    <div class="flex-1 inline-flex flex-col justify-start items-center overflow-hidden">
+                                        <div class="self-stretch text-center justify-center text-blue-900 text-base font-bold font-['DM_Sans'] leading-normal">Aakriti Mishra</div>
+                                        <div class="w-12 outline outline-[2px] outline-offset-[-1.50px] outline-rose-400 mb-3"></div>
+                                        <div class="flex w-full justify-between text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight mb-1">
+                                            <p>Enr.No.: <span class="text-black font-medium">392</span></p>
+                                            <p>Class: <span class="text-black font-medium">3rd</span></p>
+                                        </div>
+                                        <p class="flex w-full text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight mb-1">Father: <span class="ml-1 text-black font-medium">Mr. Mishra</span></p>
+                                        <p class="flex w-full text-[var(--primary-color-800)] text-xs font-bold font-['DM_Sans'] leading-tight tracking-tight">Phone: <span class="ml-1 text-black font-medium">+91 9876543210</span></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -285,19 +489,19 @@
 
             </div>
             
-            <div class="flex gap-5 h-full w-full">
+            <div class="flex gap-5 h-full w-full flex-col md:flex-row">
                 <!-- Table -->
                 <div class="h-full w-full">
-                    <div class="h-full self-stretch w-full min-w-[820px] p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-start items-start gap-2.5 overflow-hidden">
-                        <p class="justify-center text-blue-900 text-xl font-bold font-['DM_Sans'] leading-none">Students & Staff Record</p>
+                    <div class="h-full w-full p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-start items-start gap-2.5">
+                        <p class="justify-center text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-none">Students & Staff Record</p>
                         <div class="w-24 outline outline-[3px] outline-offset-[-1.50px] outline-[var(--secondary-color-600)] mb-2"></div>
                                     
-                        <div class="h-70 overflow-y-auto border-2 border-[var(--primary-color-900)] rounded-[10px] w-full [&::-webkit-scrollbar]:w-2
+                        <div class="h-70 overflow-y-auto border-2 border-[var(--primary-color-900)] rounded-[10px] w-full overflow-x-auto [&::-webkit-scrollbar]:w-2
                             [&::-webkit-scrollbar-track]:rounded-full
                             [&::-webkit-scrollbar-track]:bg-none]
                             [&::-webkit-scrollbar-thumb]:rounded-full
                             [&::-webkit-scrollbar-thumb]:bg-[var(--primary-color-500)]">
-                            <table class="min-w-full table-fixed border-separate border-spacing-0 text-[var(--primary-color-900)]">
+                            <table class="text-sm md:text-lg min-w-full table-fixed border-separate border-spacing-0 text-[var(--primary-color-900)]">
                                 <thead class="sticky top-0 z-10 bg-[var(--primary-color-500)]">
                                     <tr>
                                         <th class="py-1 px-3 border border-[var(--primary-color-600)] text-left">S.No</th>
@@ -420,7 +624,7 @@
                 </div>
 
                 <!-- Student Search -->
-                <div class="w-90 self-stretch p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-start items-start gap-2.5 overflow-hidden">
+                <div class="w-full md:w-90 self-stretch p-5 bg-white rounded-2xl shadow-[0px_2px_5px_1px_rgba(0,0,0,0.20)] inline-flex flex-col justify-start items-start gap-2.5 overflow-hidden">
                     <div class="self-stretch justify-center text-[var(--primary-color-900)] text-xl font-bold font-['DM_Sans'] leading-none">Search Student</div>
                     <div class="w-24 outline outline-[3px] outline-offset-[-1.50px] outline-rose-400"></div>
                     <form class="w-full h-40 py-2.5 inline-flex justify-center items-start gap-2.5 overflow-hidden">
@@ -432,7 +636,14 @@
                 </div>
             </div>
         </div>
+
+        
     </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+      integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./index.js"></script>
 </body>
 </html>
